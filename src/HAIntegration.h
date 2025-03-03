@@ -5,14 +5,10 @@
 #define SRC_HAINTEGRATION
 
 #include <ArduinoHA.h>
+#include "button_out.h"
 
-class HAIntegration {
-    public:
-    void loop();
-    void configure();
-    // depending on what type of device you have, make different handlers
-    // HASwitch is a device-type, see .pio\libdeps\pico\home-assistant-integration\src\device-types
-    static void switchHandler(bool state, HASwitch* sender);
-};
+void onButtonCommand(HAButton* sender);
+void loop();
+void configure();
 
 #endif // SRC_HAINTEGRATION

@@ -1,7 +1,7 @@
 // Adapted from:
 // https://github.com/daniloc/PicoW_HomeAssistant_Starter/tree/main/src
 
-#include "HAIntegration.h"
+#include "HAIntegration copy.h"
 #include "Credentials.h"
 
 #include <ArduinoHA.h>
@@ -10,6 +10,7 @@
 //Adapted via:
 //  https://github.com/dawidchyrzynski/arduino-home-assistant/blob/main/examples/button/button.ino 
 
+/*
 WiFiClient client;
 HADevice device;
 HAMqtt mqtt(client, device);
@@ -18,32 +19,20 @@ HAButton buttonB("myButtonB");
 HAButton buttonC("myButtonC");
 HAButton buttonD("myButtonD");
 
-void onButtonCommand(HAButton* sender)
+void HAIntegration::onButtonCommand(HAButton* sender)
 {
     if (sender == &buttonA) {
-        Serial.print("Button A was clicked");
-        digitalWrite(BUTTONA_PIN, HIGH);
-        delay(BUTTON_PRESS_TIME);
-        digitalWrite(BUTTONA_PIN, LOW);
+        // button A was clicked, do your logic here
     } else if (sender == &buttonB) {
-        Serial.print("Button B was clicked");
-        digitalWrite(BUTTONB_PIN, HIGH);
-        delay(BUTTON_PRESS_TIME);
-        digitalWrite(BUTTONB_PIN, LOW);
+        // button B was clicked, do your logic here
     } else if (sender == &buttonC) {
-        Serial.print("Button C was clicked");
-        digitalWrite(BUTTONC_PIN, HIGH);
-        delay(BUTTON_PRESS_TIME);
-        digitalWrite(BUTTONC_PIN, LOW);
+        // button C was clicked, do your logic here
     } else if (sender == &buttonD) {
-        Serial.print("Button D was clicked");
-        digitalWrite(BUTTOND_PIN, HIGH);
-        delay(BUTTON_PRESS_TIME);
-        digitalWrite(BUTTOND_PIN, LOW);
+        // button D was clicked, do your logic here
     }
 }
 
-void configure() {
+void HAIntegration::configure() {
     //Set device ID as MAC address
     byte mac[WL_MAC_ADDR_LENGTH];
     WiFi.macAddress(mac);
@@ -71,9 +60,9 @@ void configure() {
     } else {
         Serial.print("Could not connect to MQTT broker");
     }
-
 }
 
-void loop() {
+void HAIntegration::loop() {
     mqtt.loop();
 }
+*/

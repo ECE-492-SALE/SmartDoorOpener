@@ -5,17 +5,16 @@
 #include "HAIntegration.h"
 #include "Network.h"
 
-HAIntegration integration;
-
 void setup() {
   Serial.begin();
 
   delay(1000); //Give the serial terminal a chance to connect, if present
 
   Network::connect();
-  integration.configure();
+  configure();
 }
 
-void loop() {
-  integration.loop();
+int main() {
+  setup();
+  loop();
 }
